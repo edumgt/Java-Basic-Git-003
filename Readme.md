@@ -1,5 +1,4 @@
-## email 수집
-## 각자 이메일로 kimdypm@gmail.com 으로 git 추가 요청 이라는 제목으로 보내주세요
+# Java Basic
 
 ## github 가입
 https://github.com/openjdk/ 를 follow 합니다.
