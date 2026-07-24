@@ -3838,6 +3838,8 @@ def test_add():
 
 ## 2-1) Google Antigravity — Python Easter Egg
 
+> **참고**: 여기서 다루는 "Antigravity"는 Python 표준 라이브러리에 숨겨진 이스터에그로, 구글이 2025년 11월 공개한 실제 AI 코딩 에이전트 IDE **"Google Antigravity"**와는 이름만 같을 뿐 관련이 없습니다. 실제 서비스 가입·사용법은 [2-5) Google Antigravity (AI 코딩 에이전트 IDE)](#2-5-google-antigravity-ai-코딩-에이전트-ide) 절을 참고하세요.
+
 ### 개요
 
 `import antigravity`는 Python에 내장된 이스터 에그(Easter Egg)입니다.  
@@ -4084,6 +4086,144 @@ print(response.text)
 
 ---
 
+## 2-4) Google NotebookLM — 자료 기반 AI 리서치 도구
+
+> **강의 자료·논문·보고서를 업로드하면 그 안의 내용만 근거로 답변하는 "출처 기반(source-grounded)" AI 노트 도구입니다.**
+
+### 개요
+NotebookLM은 업로드한 문서(소스)만을 근거로 요약·질의응답·오디오 요약(팟캐스트)·마인드맵 등을 생성합니다. 일반 챗봇과 달리 답변에 항상 **출처 인용(citation)**이 붙어 어느 문서·페이지에서 나온 내용인지 추적할 수 있어, 강의 자료 분석이나 논문 리뷰에 특히 유용합니다.
+
+### 가입 및 접속
+1. https://notebooklm.google.com 접속
+2. 개인 Gmail 계정 또는 소속 Google Workspace 계정으로 로그인(별도 가입 절차 없음, Google 계정만 있으면 즉시 사용 가능)
+3. 최초 접속 시 국가/약관 동의 화면 확인 후 진행
+
+### 노트북(Notebook) 생성 및 소스 추가
+1. 홈 화면 → **Create new notebook**(새 노트북 만들기)
+2. **Add sources**에서 소스 업로드
+   - 지원 형식: PDF, Google Docs/Slides, 웹사이트 URL, 텍스트 붙여넣기, YouTube 링크(자막 기반 분석), 오디오 파일
+   - 노트북 1개당 다수의 소스를 업로드하고 동시에 근거로 활용 가능(소스 개수·용량은 요금제별 한도 존재)
+3. 업로드 완료 후 자동으로 각 소스 요약이 생성됨
+
+### 핵심 기능
+| 기능 | 설명 |
+|------|------|
+| Chat(질의응답) | 업로드한 소스 내용만 근거로 답변, 답변마다 출처 인용 표시 |
+| Audio Overview | 소스 내용을 두 명의 AI 진행자가 대화하는 팟캐스트 형태 오디오로 자동 생성(강의 복습·이동 중 청취용) |
+| Study Guide / FAQ / Timeline | 소스 기반 학습 가이드, 예상 질문, 사건/개념의 시간순 정리 자동 생성 |
+| Mind Map | 소스 내용을 시각적 마인드맵으로 구조화 |
+| Notes(노트) | AI 답변을 클릭 한 번으로 노트로 저장·편집 후 소스로 재활용 |
+| 공유(Share) | 노트북을 다른 사용자와 공유해 함께 열람·질의(조직 계정 기준 권한 관리 가능) |
+
+### 기본 사용 예시
+```
+# 소스 업로드 후 질의 예시
+"이 강의자료에서 3장의 핵심 개념 3가지를 요약해줘 (출처 포함)"
+
+# Audio Overview 생성
+우측 패널 → [Audio Overview] → [Generate] 클릭 → 생성 완료 후 재생/다운로드
+
+# 여러 소스 간 비교 질의
+"업로드한 논문 2편의 실험 방법 차이를 표로 비교해줘"
+```
+
+### 무료(개인) vs Plus(유료) 한도 (가입 시점에 따라 변동될 수 있음 — 최신 값은 공식 요금 페이지에서 확인)
+| 구분 | 개인(무료) | NotebookLM Plus |
+|------|-----------|-----------------|
+| 노트북 개수 | 제한된 개수 | 대폭 확대 |
+| 소스 개수/노트북 | 제한된 개수 | 확대 |
+| Audio Overview 생성 횟수 | 일일 제한 | 확대 + 커스터마이징(길이·언어·초점) |
+| 공유/협업 | 제한적 | 조직 단위 공유·권한 관리 |
+
+> Google Workspace / Google One AI Premium 구독에 NotebookLM Plus가 포함되는 경우가 있으므로, 이미 구독 중이라면 별도 결제 전 확인 권장.
+
+### 학습 포인트
+- 강의 계획서·교재 PDF를 올려 **수업 준비용 FAQ/타임라인 자동 생성**
+- 학생에게 **Audio Overview(팟캐스트)** 링크를 공유해 복습 자료로 활용
+- 여러 참고문헌을 동시에 업로드해 **선행 연구 비교표** 즉시 생성
+
+### 공식 사이트
+- https://notebooklm.google.com
+- https://support.google.com/notebooklm (도움말)
+
+---
+
+## 2-5) Google Antigravity (AI 코딩 에이전트 IDE)
+
+> **Gemini 3 기반, 구글이 2025년 11월 공개한 에이전트 우선(Agent-first) 코딩 IDE입니다. Cursor·Windsurf와 유사한 포지션의 독립 실행형 데스크톱 에디터입니다.**
+> 위 2-1절의 Python `import antigravity` 이스터에그와는 이름만 같을 뿐 전혀 다른 제품입니다.
+
+### 개요
+Google Antigravity는 VS Code 계열 에디터를 기반으로 하되, 코드 작성뿐 아니라 **에이전트가 스스로 계획을 세우고, 파일을 수정하고, 터미널 명령을 실행하고, 브라우저로 결과를 직접 검증**하는 것까지 하나의 데스크톱 앱 안에서 처리하도록 설계되었습니다. Gemini 3 Pro를 기본 모델로 제공하며, 다른 주요 모델도 함께 선택할 수 있습니다.
+
+### 설치 방법
+1. https://antigravity.google 접속
+2. OS에 맞는 설치 파일 다운로드
+   - Windows: `.exe` 인스톨러
+   - macOS: `.dmg` (Apple Silicon / Intel 별도 배포)
+   - Linux: `.deb`/`.AppImage` 등(배포 형태는 업데이트될 수 있음)
+3. 설치 후 실행 → 최초 실행 시 기존 VS Code 설정(테마·키바인딩·확장) 가져오기 여부 선택 가능
+
+### 가입 및 로그인
+1. 최초 실행 시 **Sign in with Google** 클릭
+2. 개인 Gmail 계정으로 로그인(가입 절차 별도 없음 — Google 계정 보유 시 즉시 시작)
+3. 로그인 완료 후 워크스페이스(프로젝트 폴더) 열기 — 기존 VS Code처럼 **Open Folder**로 로컬 저장소 지정
+
+### 핵심 개념 및 화면 구성
+| 구성 요소 | 설명 |
+|-----------|------|
+| Editor View | 기존 코드 에디터와 동일한 파일 편집 화면 |
+| Agent Manager | 여러 개의 에이전트 작업을 동시에 생성·관리·모니터링하는 대시보드(백그라운드로 여러 작업 병렬 진행 가능) |
+| Agent(에이전트) | 자연어 지시를 받아 계획 수립 → 파일 수정 → 명령 실행까지 자율 수행 |
+| Browser 서브에이전트 | 에이전트가 로컬에서 실행 중인 웹앱을 직접 브라우저로 열어 동작을 확인·스크린샷 촬영 |
+| Artifacts(아티팩트) | 에이전트의 작업 계획, 스크린샷, 실행 로그를 사람이 검토할 수 있도록 정리해 보여주는 패널 — 결과를 승인/반려하며 신뢰도 확보 |
+
+### 기본 사용법
+```
+1. 좌측 Agent Manager → [New Agent] 클릭
+2. 자연어로 작업 지시 입력
+   예) "이 저장소의 lab01-python-app에 pytest 기반 유닛 테스트를 추가하고 실행해서 통과를 확인해줘"
+3. 에이전트가 계획(Plan)을 먼저 제시 → 사용자가 검토 후 승인
+4. 에이전트가 파일 수정·터미널 명령 실행·(필요 시) 브라우저로 결과 검증
+5. Artifacts 패널에서 변경 diff·스크린샷·로그를 확인 후 최종 승인/반려
+```
+
+### 모델 선택
+- 기본: **Gemini 3 Pro** (구글 계정 로그인만으로 별도 API 키 없이 사용 가능한 무료/포함 한도 제공)
+- 설정에서 다른 모델로 전환 가능(제공 모델 목록은 지속적으로 업데이트되므로 IDE 내 모델 선택 메뉴에서 최신 목록 확인)
+
+### 요금 및 이용 한도
+- 공개 초기에는 무료로 제공되고 있으나, 사용량 한도·요금 정책은 정식 출시 이후 변경될 수 있으므로 **IDE 내 Billing/Usage 메뉴** 또는 공식 사이트에서 최신 정책을 확인하세요.
+
+### VS Code와의 관계 — 확장·설정 이관
+Antigravity는 VS Code 확장 생태계와 대부분 호환됩니다.
+```bash
+# 기존 VS Code 확장 목록 내보내기
+code --list-extensions > extensions.txt
+
+# Antigravity에서 동일 확장 설치 (Antigravity CLI가 등록된 경우)
+# 각 항목을 Antigravity의 확장 마켓플레이스에서 검색해 설치
+```
+
+### 다른 에이전트 IDE와 비교
+| 항목 | Google Antigravity | Cursor | Windsurf |
+|------|---------------------|--------|----------|
+| 기반 | VS Code 계열 | VS Code 계열 | VS Code 계열 |
+| 기본 모델 | Gemini 3 Pro (멀티 모델 지원) | 멀티 모델(선택형) | 멀티 모델(선택형) |
+| 특징 | Agent Manager로 다중 에이전트 병렬 관리, 브라우저 서브에이전트 내장 | 인라인 편집·Composer 중심 | Cascade 에이전트 흐름 중심 |
+| 배포사 | Google | Anysphere | Cognition(구 Windsurf) |
+
+### 학습 포인트
+- **계획(Plan) 우선 승인 구조**: 에이전트가 실행 전 계획을 먼저 보여주므로, 대규모 변경 전 검토 습관을 들이기 좋음
+- **Artifacts로 검증 가능한 자율성**: "믿고 맡기기"가 아니라 스크린샷·로그 기반으로 결과를 검증하는 워크플로우 학습
+- 팀 프로젝트에서 반복 작업(테스트 추가, 리팩터링, 문서화)을 Agent Manager로 병렬 위임하는 방식 실습
+
+### 공식 사이트
+- https://antigravity.google
+- https://blog.google (구글 공식 블로그 — 발표 아티클 검색)
+
+---
+
 ## 3) Node.js 다운로드 및 환경 구축
 
 ### 설치 순서
@@ -4213,7 +4353,7 @@ VS Code 탐색기(Explorer) 패널에서 Java 소스 파일 구조를 확인하�
 
 ---
 
-## 8) 필수 플랫폼 계정 준비 (Gmail · GitHub · Slack · Docker Hub · AWS)
+## 8) 필수 플랫폼 계정 준비 (Gmail · GitHub · Slack · Docker Hub · AWS · GCP)
 
 ### 8-1) Gmail 계정 가입 및 보안 설정
 1. https://accounts.google.com/signup 접속 → Google 계정 생성
@@ -4222,14 +4362,112 @@ VS Code 탐색기(Explorer) 패널에서 Java 소스 파일 구조를 확인하�
 4. 보안 알림/로그인 기기 내역을 주기적으로 확인
 5. 교육용 서비스 가입 시 동일 Gmail 주소를 기준 계정으로 통일 권장
 
-### 8-2) GitHub 가입 및 2FA 설정
-1. https://github.com 접속 → **Sign up**으로 계정 생성
-2. 이메일 인증 완료 후 프로필 기본 설정
-3. 우측 상단 프로필 → **Settings** → **Password and authentication**
-4. **Two-factor authentication** 활성화
-   - 권장: Authentication app(TOTP)
-   - 대안: Security key (FIDO2)
-5. 복구 코드(Recovery codes) 안전한 위치에 백업
+### 8-2) GitHub 가입 · 2FA · SSH/토큰 인증 · gh CLI 완전 가이드
+
+#### A. 계정 가입
+1. https://github.com 접속 → **Sign up**
+2. 이메일 주소 입력 → 비밀번호 설정 → 사용자 이름(Username) 결정
+   - Username은 프로필 URL(`github.com/사용자명`)이 되며 이후 변경 가능하지만 기존 링크가 깨질 수 있어 신중히 선택
+3. 브라우저/이메일 인증 코드 확인(로봇 방지 퍼즐 포함될 수 있음)
+4. 가입 설문(사용 목적 등) → **Free 플랜**으로 시작(개인 사용자는 대부분 무료 플랜으로 충분)
+   - 조직 단위 협업이 필요하면 이후 **Settings → Organizations**에서 별도 조직(Organization) 생성 가능(무료 플랜도 조직 생성 가능, Team/Enterprise는 고급 권한관리·SSO 필요 시)
+5. 프로필 설정 — **Settings → Public profile**에서 이름/소개/아바타/소속 입력
+
+#### B. 2단계 인증(2FA) 설정 — 필수
+1. 우측 상단 프로필 아이콘 → **Settings** → **Password and authentication**
+2. **Two-factor authentication** → **Enable two-factor authentication**
+3. 방식 선택
+   - 권장: Authentication app(Google Authenticator, Authy 등 TOTP) — QR 코드 스캔 후 6자리 코드 입력
+   - 대안: Security key(FIDO2/YubiKey), SMS(보안 취약 — 최후 수단)
+4. **Recovery codes(복구 코드)** 다운로드 후 오프라인(비밀번호 관리자 등)에 안전하게 보관
+5. 2FA 미설정 시 2026년 기준 GitHub 정책상 코드 기여(push) 자체가 제한될 수 있으므로 가입 직후 반드시 완료
+
+#### C. SSH 키 생성 및 등록 (Git push/pull 인증)
+```bash
+# SSH 키 생성 (이미 있다면 생략)
+ssh-keygen -t ed25519 -C "you@example.com"
+# 저장 위치: 기본값(~/.ssh/id_ed25519) 그대로 Enter 권장
+
+# SSH agent 등록
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+
+# 공개키 복사 (아래 내용을 GitHub에 등록)
+cat ~/.ssh/id_ed25519.pub
+```
+1. GitHub → **Settings** → **SSH and GPG keys** → **New SSH key**
+2. Title(식별용 이름) 입력 → 위에서 복사한 공개키 붙여넣기 → **Add SSH key**
+3. 연결 테스트
+```bash
+ssh -T git@github.com
+# Hi <username>! You've successfully authenticated... 메시지 확인
+```
+4. 원격 저장소를 SSH 방식으로 설정
+```bash
+git remote set-url origin git@github.com:edumgt/edumgt-lab-init.git
+```
+
+#### D. Personal Access Token(PAT) 발급 (HTTPS 인증 · CI/CD · API 호출용)
+GitHub는 2021년부터 비밀번호를 이용한 HTTPS Git 인증을 지원하지 않으므로, HTTPS로 push/pull 하거나 API를 호출하려면 토큰이 필요합니다.
+
+1. **Settings** → **Developer settings** → **Personal access tokens**
+2. **Fine-grained tokens**(권장) → **Generate new token**
+   - Repository access: 특정 저장소만 선택(최소 권한 원칙)
+   - Permissions: 필요한 항목만 체크(예: Contents: Read and write, Pull requests: Read and write)
+   - Expiration: 90일 등 짧은 만료 기간 설정 권장
+3. 또는 **Tokens (classic)** — 전체 계정 범위 스코프(`repo`, `workflow` 등) 필요 시 사용, 세분화가 안 되므로 최소한으로 사용
+4. 생성된 토큰은 **최초 1회만 표시**되므로 즉시 안전한 곳에 저장
+
+```bash
+# HTTPS 인증 시 비밀번호 대신 토큰 입력
+git clone https://github.com/edumgt/edumgt-lab-init.git
+# Username: <github-username>
+# Password: <발급받은 토큰 붙여넣기>
+
+# 자격 증명 캐싱(재입력 방지)
+git config --global credential.helper cache
+```
+
+#### E. GitHub CLI(gh) — 설치 및 인증
+GitHub CLI를 사용하면 터미널에서 저장소·이슈·PR·Actions·시크릿 관리를 브라우저 전환 없이 처리할 수 있습니다. 전체 명령어는 아래 **["GitHub CLI (gh) 완전 명령어 가이드"](#github-cli-gh-완전-명령어-가이드)** 절에서 다루며, 여기서는 최초 설치·인증만 요약합니다.
+
+```bash
+# 설치 (Windows — winget)
+winget install --id GitHub.cli
+
+# 설치 (macOS — Homebrew)
+brew install gh
+
+# 설치 (Linux/WSL — Ubuntu)
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+sudo apt update && sudo apt install gh
+
+# 설치 확인
+gh --version
+
+# 인증 (대화형 — 브라우저 OAuth)
+gh auth login
+# ? What account do you want to log into? GitHub.com
+# ? What is your preferred protocol for Git operations? HTTPS 또는 SSH
+# ? Authenticate Git with your GitHub credentials? Yes
+# ? How would you like to authenticate? Login with a web browser
+#   → 표시되는 one-time code 복사 → 브라우저에서 붙여넣고 승인
+
+# 인증 상태 확인
+gh auth status
+
+# 토큰 방식 인증(CI/비대화형 환경)
+echo $GITHUB_TOKEN | gh auth login --with-token
+```
+
+#### F. 가입 후 보안 체크리스트
+- [ ] 2FA(Authenticator 앱) 활성화 완료
+- [ ] 복구 코드 오프라인 백업
+- [ ] SSH 키 생성 및 GitHub에 등록, `ssh -T git@github.com` 성공 확인
+- [ ] Fine-grained PAT 발급(필요 저장소·권한만 최소 부여, 만료 기간 설정)
+- [ ] `gh auth login` 완료 및 `gh auth status`로 인증 확인
+- [ ] 비밀번호 관리자에 PAT/복구 코드 저장(코드/저장소에는 절대 커밋 금지)
 
 ### 8-3) Slack 가입 및 워크스페이스 사용
 1. https://slack.com/get-started 접속 → 계정 생성(또는 Google 계정으로 계속)
@@ -4255,23 +4493,523 @@ VS Code 탐색기(Explorer) 패널에서 Java 소스 파일 구조를 확인하�
 docker login -u <dockerhub-username>
 ```
 
-### 8-5) AWS 가입 및 MFA 설정
-1. https://portal.aws.amazon.com/billing/signup 접속 → **Create an AWS Account**
-2. 루트 계정 생성(결제 정보/전화 인증 포함)
-3. AWS Console 로그인 후 우측 상단 계정 메뉴 → **Security credentials**
-4. **Multi-factor authentication (MFA)** 에서 MFA 디바이스 등록
-   - 권장: 가상 MFA 앱(TOTP) 또는 하드웨어 보안키
-5. 루트 계정은 일상 작업에 사용하지 말고, 관리자 IAM 사용자 별도 생성 후 사용
+### 8-5) AWS 가입 · 구독결제 · IAM · 프로젝트(계정) 구조 · 리전 · MFA · CLI 완전 가이드
 
-### 8-6) 사전 점검 체크리스트
+#### A. 계정 가입 (Root Account 생성)
+1. https://portal.aws.amazon.com/billing/signup 접속 → **Create an AWS Account**
+2. 이메일 주소 + 계정 이름(회사명 또는 개인 식별명) 입력 → 인증 코드 확인
+3. 루트 사용자 암호 설정 (다른 서비스와 절대 재사용하지 말 것)
+4. 연락처 정보 입력 (개인/업무용 선택)
+5. 결제 정보(신용/체크카드) 등록 → $1 내외 임시 승인 후 자동 취소(카드 유효성 검증용)
+6. 전화번호 인증(SMS 또는 음성 코드)
+7. 지원 플랜 선택 — 기본값 **Basic Support(무료)**로 충분 (Developer/Business는 유료 SLA 필요 시만 선택)
+8. 가입 완료 후 https://console.aws.amazon.com 로그인 확인
+
+> 가입 시 프로모션(Free Tier) 조건과 무료 크레딧 정책은 시점에 따라 달라질 수 있으므로, 가입 직전 공식 Free Tier 페이지(https://aws.amazon.com/free)에서 최신 조건을 반드시 재확인하세요.
+
+#### B. 구독결제(Billing) 및 예산 알림 설정
+1. 콘솔 우측 상단 계정명 → **Billing and Cost Management** 이동
+2. **Payment preferences**에서 기본 결제 수단 확인/추가
+3. **Budgets** → **Create budget** → 예산 유형(Cost budget) 선택 → 월 한도 금액 입력
+4. 임계치(예: 50%, 80%, 100%) 도달 시 이메일 알림 수신자 등록
+5. **Cost Explorer**로 서비스별/일자별 지출 추이 확인 (활성화 후 최대 24시간 반영 지연)
+6. **Billing preferences** → PDF 인보이스 이메일 수신, 통화(Currency) 확인
+7. (팀/조직 단위) **Consolidated Billing** — AWS Organizations로 여러 계정의 청구를 관리 계정 하나로 통합 가능
+
+```bash
+# CLI로 이번 달 비용 조회 예시
+aws ce get-cost-and-usage \
+  --time-period Start=2026-07-01,End=2026-07-24 \
+  --granularity MONTHLY \
+  --metrics "UnblendedCost"
+```
+
+#### C. 루트 계정 MFA 설정 (가입 직후 필수)
+1. 콘솔 우측 상단 계정 메뉴 → **Security credentials**
+2. **Multi-factor authentication (MFA)** → **Assign MFA device**
+3. 디바이스 유형 선택
+   - 권장: 가상 MFA 앱(Google Authenticator, Authy 등 TOTP)
+   - 대안: 하드웨어 보안키(FIDO2/U2F), 하드웨어 OTP 토큰
+4. QR 코드 스캔 후 연속된 인증 코드 2개 입력 → 등록 완료
+5. 루트 계정은 이후 일상 작업(로그인)에 사용하지 않고, **결제·계정 설정 변경 등 최소한의 작업에만** 사용
+
+#### D. IAM 사용자 · 그룹 · 역할 생성
+루트 계정은 모든 권한을 가지므로 최초 설정 후에는 사용하지 않고, 관리자 권한을 가진 IAM 사용자를 만들어 사용합니다.
+
+1. IAM 콘솔(https://console.aws.amazon.com/iam) → **User groups** → **Create group**
+   - 그룹 이름: `Admins`
+   - 정책 연결: `AdministratorAccess` (관리자) 또는 최소 권한 원칙에 따른 커스텀 정책
+2. **Users** → **Create user**
+   - 사용자 이름 입력 → **Provide user access to the AWS Management Console**(콘솔 로그인 필요 시 체크)
+   - 방금 만든 `Admins` 그룹에 추가
+3. 생성된 IAM 사용자로 재로그인 → 해당 사용자에도 **개별 MFA** 등록 (Security credentials 탭)
+4. 프로그래밍 방식 접근(CLI/SDK)이 필요하면 **Security credentials** 탭 → **Access keys** → **Create access key**
+   - Use case: *Command Line Interface (CLI)* 선택
+   - 발급된 Access Key ID / Secret Access Key는 **최초 1회만 표시** — 반드시 안전한 곳에 저장(비밀번호 관리자 권장)
+5. IAM 정책은 JSON 문서로 정의됩니다 (커스텀 최소 권한 정책 예시):
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowS3ReadWriteOnSpecificBucket",
+      "Effect": "Allow",
+      "Action": ["s3:GetObject", "s3:PutObject", "s3:ListBucket"],
+      "Resource": [
+        "arn:aws:s3:::my-edumgt-bucket",
+        "arn:aws:s3:::my-edumgt-bucket/*"
+      ]
+    }
+  ]
+}
+```
+
+```bash
+# CLI로 관리자 그룹/사용자 생성 예시
+aws iam create-group --group-name Admins
+aws iam attach-group-policy --group-name Admins \
+  --policy-arn arn:aws:iam::aws:policy/AdministratorAccess
+aws iam create-user --user-name alice
+aws iam add-user-to-group --user-name alice --group-name Admins
+
+# 액세스 키 발급 (JSON 형식으로 결과 확인)
+aws iam create-access-key --user-name alice --output json
+```
+
+```json
+{
+  "AccessKey": {
+    "UserName": "alice",
+    "AccessKeyId": "AKIAIOSFODNN7EXAMPLE",
+    "Status": "Active",
+    "SecretAccessKey": "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
+    "CreateDate": "2026-07-24T00:00:00+00:00"
+  }
+}
+```
+
+> **주의**: `SecretAccessKey`는 이 응답에서만 확인 가능하며 이후에는 재조회할 수 없습니다. 절대 Git 저장소에 커밋하지 마세요(본 문서의 "시크릿 스캐닝" 절 참고).
+
+6. 여러 AWS 계정/조직 규모라면 장기 Access Key 대신 **IAM Identity Center**(구 AWS SSO)로 사람 사용자를 통합 인증하는 것을 권장 (임시 자격 증명 자동 발급·회전)
+
+#### E. 프로젝트(계정) 구조 — AWS Organizations
+AWS에는 GCP의 "프로젝트" 같은 리소스 컨테이너 개념이 없고, 대신 **계정(Account) 자체가 최상위 격리 단위**입니다. 여러 팀/환경(dev·staging·prod)을 분리하려면 AWS Organizations로 멀티 계정 구조를 구성합니다.
+
+1. https://console.aws.amazon.com/organizations → **Create an organization**
+2. 최초 계정이 **관리 계정(Management account)**이 됨
+3. **Add an AWS account** → 신규 계정 생성 또는 기존 계정 초대
+4. **Organizational Units(OU)** 생성 — 부서/환경별로 그룹화 (예: `Dev`, `Prod`, `Security`)
+5. **Service Control Policies(SCP)**로 OU/계정 단위 최대 권한 범위 제한
+6. **Consolidated Billing**으로 모든 멤버 계정의 청구를 관리 계정에서 통합 관리
+
+#### F. 리전(Region) 설정
+1. 콘솔 우측 상단 리전 드롭다운에서 작업 리전 선택 (예: **아시아 태평양(서울) `ap-northeast-2`**)
+2. 대부분의 리소스는 리전 종속적이므로, 콘솔에서 리소스가 보이지 않으면 리전 선택부터 확인
+3. CLI 기본 리전은 `aws configure` 또는 환경변수로 지정
+
+```bash
+# 사용 가능한 리전 목록 확인
+aws ec2 describe-regions --output table
+
+# 환경변수로 임시 지정
+export AWS_DEFAULT_REGION=ap-northeast-2
+```
+
+#### G. AWS CLI 다운로드 및 설치 (v2)
+
+```powershell
+# Windows — MSI 인스톨러
+# https://awscli.amazonaws.com/AWSCLIV2.msi 다운로드 후 실행
+# 또는 winget 사용
+winget install Amazon.AWSCLI
+```
+
+```bash
+# macOS
+curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
+sudo installer -pkg AWSCLIV2.pkg -target /
+
+# 또는 Homebrew
+brew install awscli
+```
+
+```bash
+# Linux / WSL
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+
+# 설치 확인
+aws --version
+```
+
+#### H. AWS CLI 인증 설정
+**방법 1 — Access Key 기반 (`aws configure`)**
+
+```bash
+aws configure
+# AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
+# AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+# Default region name [None]: ap-northeast-2
+# Default output format [None]: json
+```
+
+위 명령은 아래 두 파일을 생성/수정합니다.
+
+```ini
+# ~/.aws/credentials
+[default]
+aws_access_key_id = AKIAIOSFODNN7EXAMPLE
+aws_secret_access_key = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+
+# 여러 계정/역할을 쓸 경우 Named Profile 추가
+[project-dev]
+aws_access_key_id = AKIA...
+aws_secret_access_key = ...
+```
+
+```ini
+# ~/.aws/config
+[default]
+region = ap-northeast-2
+output = json
+
+[profile project-dev]
+region = us-east-1
+output = json
+```
+
+```bash
+# 특정 프로파일로 명령 실행
+aws s3 ls --profile project-dev
+
+# 현재 인증 확인 (Access Key가 누구 소유인지 검증)
+aws sts get-caller-identity
+```
+
+**방법 2 — IAM Identity Center(SSO) 기반 (조직/팀 단위 권장)**
+
+```bash
+aws configure sso
+# SSO session name: my-sso
+# SSO start URL: https://my-org.awsapps.com/start
+# SSO region: ap-northeast-2
+# → 브라우저가 열리고 로그인 후 계정/역할 선택
+# CLI default client Region / output format 입력
+
+# 이후 로그인/갱신
+aws sso login --profile my-profile
+```
+
+**방법 3 — 임시 자격 증명(JSON 스키마)을 이용한 `credential_process` 연동**
+
+AWS CLI는 외부 스크립트가 아래 JSON 형식을 표준출력으로 반환하면 이를 임시 자격 증명으로 사용할 수 있습니다(사내 Vault, STS AssumeRole 스크립트 등과 연동 시 유용).
+
+```json
+{
+  "Version": 1,
+  "AccessKeyId": "ASIAIOSFODNN7EXAMPLE",
+  "SecretAccessKey": "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
+  "SessionToken": "FQoGZXIvYXdzEDGA...EXAMPLE",
+  "Expiration": "2026-07-24T12:00:00Z"
+}
+```
+
+```ini
+# ~/.aws/config
+[profile vault-role]
+credential_process = /usr/local/bin/get-temp-creds.sh
+region = ap-northeast-2
+```
+
+#### I. AWS 접근 보안 체크리스트
+- [ ] 루트 계정 MFA 등록 완료
+- [ ] 루트 액세스 키는 생성하지 않음(원칙적으로 발급 자체를 지양)
+- [ ] 관리자 IAM 사용자/그룹 별도 생성 및 MFA 등록
+- [ ] 장기 Access Key 대신 IAM Identity Center 또는 IAM Role(AssumeRole) 우선 사용
+- [ ] Access Key/Secret을 코드·Git에 절대 커밋하지 않음 (`.gitignore`, Secret Scanning 활용)
+- [ ] 90일 이상 미사용 Access Key는 비활성화/삭제 (`aws iam list-access-keys`)
+
+---
+
+### 8-6) GCP(Google Cloud Platform) 가입 · 구독결제 · 프로젝트/조직 · IAM · 리전 · MFA · gcloud CLI 완전 가이드
+
+#### A. 계정 가입
+1. 기존 Gmail 계정으로 https://console.cloud.google.com 접속 (없다면 8-1 참고해 먼저 생성)
+2. 최초 접속 시 국가/서비스 약관 동의
+3. 처음 결제 계정을 만들 때 무료 체험(Free Trial) 안내가 표시될 수 있음(가입 시점별 크레딧 금액·기간은 변동되므로 https://cloud.google.com/free 에서 최신 조건 확인)
+4. 조직 단위(회사) 사용 시에는 개인 Gmail 대신 **Google Workspace** 또는 무료 **Cloud Identity** 도메인 계정으로 가입하는 것을 권장(아래 C 참고)
+
+#### B. 구독결제(Billing account) 설정
+1. 콘솔 좌측 메뉴 → **Billing** → **Manage billing accounts**
+2. **Create account**(신규) 또는 무료 체험 시 자동 생성된 계정 사용
+3. 결제 수단(카드) 등록 → 본인 확인
+4. 프로젝트를 만들면 **반드시 하나의 결제 계정과 연결**해야 유료 API/리소스 사용 가능
+   - 콘솔: **Billing** → **Link a billing account** → 대상 프로젝트 선택
+5. **Budgets & alerts** → **Create budget** → 프로젝트/결제계정 단위 월 예산과 알림 임계치(%) 설정
+6. (고급) **Billing export**로 BigQuery에 상세 사용량 내보내기 → 세부 비용 분석
+
+```bash
+# 결제 계정 목록 확인
+gcloud billing accounts list
+
+# 프로젝트에 결제 계정 연결
+gcloud billing projects link my-project-id \
+  --billing-account=XXXXXX-XXXXXX-XXXXXX
+```
+
+#### C. 프로젝트 생성 및 조직(Organization) 구조 — GCP의 "테넌트" 개념
+GCP는 AWS의 계정과 달리 **Project**가 리소스의 기본 컨테이너입니다. 여러 프로젝트를 하나의 조직으로 묶으려면 Google Workspace/Cloud Identity 도메인이 필요합니다.
+
+**계층 구조**: `Organization(도메인)` → `Folder(선택, 부서/팀 단위)` → `Project` → `개별 리소스(VM, 버킷 등)`
+
+1. 콘솔 상단 프로젝트 선택기 → **New Project**
+   - Project name 입력 (표시용 이름, 변경 가능)
+   - Project ID 확인/수정 — **전역 고유값이며 생성 후 변경 불가** (예: `edumgt-prod-2026`)
+   - Location(조직/폴더) 선택 — 도메인 조직이 없으면 "No organization"으로 생성됨
+2. 도메인 기반 조직이 필요한 경우
+   - https://workspace.google.com 또는 무료 Cloud Identity(https://cloud.google.com/identity) 로 도메인 인증
+   - 도메인 인증 완료 시 GCP가 자동으로 최상위 **Organization** 리소스를 생성
+   - **IAM & Admin** → **Manage Resources**에서 Folder 생성 → 프로젝트를 Folder 하위로 이동
+3. 조직이 없는 개인 프로젝트는 계층 최상단이 Project 자체가 됨(orphan project)
+
+```bash
+# 프로젝트 생성 (조직 하위)
+gcloud projects create edumgt-prod-2026 \
+  --name="EduMgt Production" \
+  --organization=123456789012
+
+# 현재 활성 프로젝트 확인/전환
+gcloud config set project edumgt-prod-2026
+gcloud config get-value project
+
+# 조직/폴더 구조 조회
+gcloud organizations list
+gcloud resource-manager folders list --organization=123456789012
+```
+
+#### D. IAM 설정 (Principal · Role · Policy)
+1. 콘솔 → **IAM & Admin** → **IAM**
+2. **Grant Access** → Principal(구성원) 입력
+   - Google 계정(개인 사용자), Google 그룹, 서비스 계정, Cloud Identity 도메인 전체 중 선택
+   - `allUsers`/`allAuthenticatedUsers`(전체 공개)는 특별한 경우가 아니면 사용 금지
+3. Role(역할) 선택
+   - **기본 역할(Basic role)**: Owner/Editor/Viewer — 범위가 넓어 운영 환경에서는 지양
+   - **사전 정의 역할(Predefined role)**: 서비스 단위 세분화 (예: `roles/storage.objectViewer`)
+   - **커스텀 역할(Custom role)**: 필요한 권한만 조합해 최소 권한 원칙 구현
+4. IAM 정책은 내부적으로 JSON/YAML 바인딩 문서로 관리되며 CLI로 직접 조회·수정 가능
+
+```bash
+# 프로젝트에 역할 부여 (CLI)
+gcloud projects add-iam-policy-binding edumgt-prod-2026 \
+  --member="user:alice@example.com" \
+  --role="roles/editor"
+
+# 현재 IAM 정책을 JSON으로 내보내기 → 수정 → 다시 적용
+gcloud projects get-iam-policy edumgt-prod-2026 --format=json > policy.json
+# (policy.json 편집 후)
+gcloud projects set-iam-policy edumgt-prod-2026 policy.json
+```
+
+```json
+{
+  "bindings": [
+    {
+      "role": "roles/editor",
+      "members": ["user:alice@example.com"]
+    },
+    {
+      "role": "roles/storage.objectViewer",
+      "members": ["serviceAccount:ci-bot@edumgt-prod-2026.iam.gserviceaccount.com"]
+    }
+  ],
+  "etag": "BwXhqLp1Zz4=",
+  "version": 1
+}
+```
+
+#### E. 리전(Region) / 존(Zone) 설정
+1. 리소스 생성 화면(Compute Engine, GKE 등)에서 개별적으로 Region/Zone 선택 가능
+2. 서울 리전: `asia-northeast3` (존: `asia-northeast3-a/b/c`) — 지연시간 최소화를 위해 최우선 고려
+3. CLI 기본값 지정
+
+```bash
+gcloud config set compute/region asia-northeast3
+gcloud config set compute/zone asia-northeast3-a
+
+# 사용 가능한 리전/존 목록
+gcloud compute regions list
+gcloud compute zones list --filter="region:asia-northeast3"
+```
+
+#### F. MFA(2단계 인증) 설정
+GCP 콘솔 로그인은 Google 계정 인증을 그대로 사용하므로, MFA는 **Google 계정 보안 설정**에서 관리합니다.
+
+1. https://myaccount.google.com/security 접속
+2. **2단계 인증(2-Step Verification)** → 사용 설정
+   - 권장: Google 프롬프트(스마트폰 승인) 또는 Authenticator 앱(TOTP)
+   - 추가 옵션: 보안 키(FIDO2/YubiKey) — 관리자 계정에는 하드웨어 키 권장
+3. 조직(Workspace/Cloud Identity) 전체에 강제 적용하려면
+   - https://admin.google.com → **보안** → **2단계 인증**
+   - 조직 단위(OU)별로 **적용(Enforce)** 설정 → 유예 기간 설정 후 전체 강제
+
+#### G. gcloud CLI 다운로드 및 설치
+
+```powershell
+# Windows — 설치 프로그램 또는 winget
+winget install Google.CloudSDK
+```
+
+```bash
+# macOS — Homebrew
+brew install --cask google-cloud-sdk
+
+# 또는 공식 설치 스크립트 (macOS/Linux/WSL 공통)
+curl https://sdk.cloud.google.com | bash
+exec -l $SHELL
+```
+
+```bash
+# Linux(Debian/Ubuntu) — apt 저장소 등록 방식
+sudo apt-get update && sudo apt-get install -y apt-transport-https ca-certificates gnupg curl
+curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | \
+  sudo gpg --dearmor -o /usr/share/keyrings/cloud.google.gpg
+echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | \
+  sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+sudo apt-get update && sudo apt-get install -y google-cloud-cli
+
+# 설치 확인
+gcloud version
+```
+
+#### H. gcloud CLI 인증 및 초기 설정
+
+```bash
+# 최초 1회 대화형 초기 설정
+# → 브라우저에서 Google 계정 로그인 → 사용할 프로젝트 선택 → 기본 region/zone 설정
+gcloud init
+```
+
+```bash
+# 사람 사용자 로그인 (gcloud 명령 실행용 인증)
+gcloud auth login
+
+# 애플리케이션 기본 자격 증명(ADC) 로그인
+# → SDK/클라이언트 라이브러리(Python, Node 등)가 이 자격 증명을 자동으로 사용
+gcloud auth application-default login
+# 저장 위치: ~/.config/gcloud/application_default_credentials.json (Windows: %APPDATA%\gcloud\...)
+
+# 현재 인증/설정 상태 확인
+gcloud auth list
+gcloud config list
+```
+
+```bash
+# 여러 프로젝트/계정을 전환하며 사용할 때 — Named Configuration (AWS Named Profile과 유사)
+gcloud config configurations create dev-config
+gcloud config configurations activate dev-config
+gcloud config set project edumgt-dev-2026
+gcloud config set account alice@example.com
+
+gcloud config configurations list
+```
+
+#### I. 서비스 계정(Service Account) 및 JSON 키 발급
+사람이 아닌 애플리케이션/CI 파이프라인이 GCP API를 호출할 때는 서비스 계정을 사용합니다.
+
+1. 콘솔 → **IAM & Admin** → **Service Accounts** → **Create Service Account**
+2. 이름/설명 입력 → 필요한 역할만 최소로 부여(예: `roles/storage.objectAdmin`)
+3. 생성된 서비스 계정 클릭 → **Keys** 탭 → **Add Key** → **Create new key** → **JSON** 선택
+4. `프로젝트ID-서비스계정이름.json` 형태의 키 파일이 자동 다운로드됨 (아래는 예시 구조)
+
+```json
+{
+  "type": "service_account",
+  "project_id": "edumgt-prod-2026",
+  "private_key_id": "a1b2c3d4e5f6...",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQ...\n-----END PRIVATE KEY-----\n",
+  "client_email": "ci-bot@edumgt-prod-2026.iam.gserviceaccount.com",
+  "client_id": "112233445566778899000",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "universe_domain": "googleapis.com"
+}
+```
+
+```bash
+# CLI로 서비스 계정/키 생성
+gcloud iam service-accounts create ci-bot \
+  --display-name="CI/CD Bot"
+
+gcloud projects add-iam-policy-binding edumgt-prod-2026 \
+  --member="serviceAccount:ci-bot@edumgt-prod-2026.iam.gserviceaccount.com" \
+  --role="roles/storage.objectAdmin"
+
+gcloud iam service-accounts keys create key.json \
+  --iam-account=ci-bot@edumgt-prod-2026.iam.gserviceaccount.com
+```
+
+```bash
+# JSON 키 파일을 이용한 인증 방법 (택 1)
+
+# 방법 1 — 환경변수로 SDK/클라이언트 라이브러리에 자동 인식시키기
+export GOOGLE_APPLICATION_CREDENTIALS="/path/to/key.json"
+
+# 방법 2 — gcloud CLI 자체를 서비스 계정으로 인증
+gcloud auth activate-service-account \
+  --key-file=/path/to/key.json
+```
+
+**서비스 계정 키 보안 체크리스트**
+- [ ] JSON 키 파일은 `.gitignore`에 등록하고 절대 저장소에 커밋하지 않음
+- [ ] 키 파일은 필요한 실행 환경에만 배포 (CI 시크릿 저장소 활용 — GitHub Actions Secrets 등)
+- [ ] 미사용/오래된 키는 주기적으로 삭제 (`gcloud iam service-accounts keys list/delete`)
+- [ ] 가능하면 장기 JSON 키 대신 **Workload Identity Federation**(키리스 연동, 예: GitHub Actions ↔ GCP)을 우선 검토
+- [ ] 서비스 계정에도 프로젝트 전체가 아닌 최소 범위 역할만 부여
+
+```bash
+# 서비스 계정 키 조회/삭제 예시
+gcloud iam service-accounts keys list \
+  --iam-account=ci-bot@edumgt-prod-2026.iam.gserviceaccount.com
+
+gcloud iam service-accounts keys delete KEY_ID \
+  --iam-account=ci-bot@edumgt-prod-2026.iam.gserviceaccount.com
+```
+
+### 8-6-1) AWS ↔ GCP 핵심 개념 대응표
+
+| 개념 | AWS | GCP |
+|------|-----|-----|
+| 최상위 리소스 컨테이너 | Account(계정) | Project(프로젝트) |
+| 조직/테넌트 단위 | AWS Organizations (관리 계정 + 멤버 계정) | Organization (Workspace/Cloud Identity 도메인 필요) |
+| 그룹화 단위 | OU(Organizational Unit) | Folder |
+| 접근 제어 | IAM Users/Groups/Roles + JSON Policy | IAM Principals + Role Binding(JSON/YAML) |
+| 사람 로그인 MFA | IAM → Security credentials → MFA 디바이스 | Google 계정 → 2단계 인증(myaccount.google.com) |
+| 워크로드 인증 수단 | Access Key(ID+Secret) / IAM Role | 서비스 계정 JSON 키 / Workload Identity |
+| CLI 최초 설정 | `aws configure` | `gcloud init` |
+| CLI 인증 파일 위치 | `~/.aws/credentials`, `~/.aws/config` | `~/.config/gcloud/`, `application_default_credentials.json` |
+| SSO/연합 인증 | IAM Identity Center | Workload Identity Federation |
+| 결제 단위 | Billing(계정 단위, Organizations로 통합 가능) | Billing account(프로젝트에 연결) |
+| 서울 리전 코드 | `ap-northeast-2` | `asia-northeast3` |
+
+---
+
+### 8-7) 사전 점검 체크리스트
 - [ ] Gmail 계정 생성 및 2단계 인증 활성화
 - [ ] GitHub 계정 생성 및 2FA 활성화
 - [ ] Slack 계정 생성 및 팀 워크스페이스 참여
 - [ ] Docker Hub 계정 생성 및 2FA 활성화
 - [ ] AWS 계정 생성 및 루트 MFA 활성화
+- [ ] AWS 관리자 IAM 사용자 생성 + MFA 등록 + Access Key 발급
+- [ ] AWS CLI 설치 및 `aws configure`(또는 SSO) 인증 완료
+- [ ] GCP 프로젝트 생성 및 결제 계정 연결
+- [ ] GCP IAM 최소 권한 역할 부여 확인
+- [ ] gcloud CLI 설치 및 `gcloud init` 인증 완료
+- [ ] GCP 서비스 계정 JSON 키 발급 시 `.gitignore` 등록 확인
 - [ ] 복구 코드/백업 코드 오프라인 보관
 
-### 8-7) Git · GitHub 실무 사용 가이드 (브랜치 · 머지 · PR · Fork · 공개범위 · Settings)
+### 8-8) Git · GitHub 실무 사용 가이드 (브랜치 · 머지 · PR · Fork · 공개범위 · Settings)
 
 #### A. 기본 Git 초기 설정
 ```bash
@@ -5706,8 +6444,50 @@ pip install mcp
 }
 ```
 
-#### VS Code 연동
-- **Continue** 확장 설정:
+#### VS Code 연동 — 공식 Claude Code 확장 (권장)
+
+Anthropic이 공식 배포하는 **Claude Code** VS Code 확장은 별도 CLI 설치 없이도 에디터 안에서 바로 에이전트를 실행할 수 있습니다(내부적으로 `@anthropic-ai/claude-code` 엔진을 사용).
+
+**설치 방법 (택 1)**
+```bash
+# 방법 1 — VS Code Marketplace에서 검색 후 설치
+# 확장 검색창에 "Claude Code" 입력 → Anthropic 게시 확장 설치
+
+# 방법 2 — CLI로 확장 ID 직접 설치
+code --install-extension anthropic.claude-code
+
+# 방법 3 — claude-code CLI가 이미 설치돼 있다면 터미널에서 자동 연동
+npm install -g @anthropic-ai/claude-code
+cd my-project
+claude
+# 대화 중 /ide 명령을 입력하면 열려 있는 VS Code 창에 자동으로 연결됨
+```
+
+**로그인 및 초기 설정**
+1. VS Code 좌측 활동 표시줄(Activity Bar)에 추가된 **Claude** 아이콘 클릭
+2. **Sign in with Claude.ai**(Pro/Max 구독) 또는 **Use Console API Key**(종량제, `sk-ant-...`) 중 선택
+   - Claude.ai 계정 로그인 시 브라우저 창이 열리며 OAuth 인증 후 VS Code로 복귀
+3. 우측 패널에 대화창이 표시되며, 코드 선택 후 **Add to Chat**으로 특정 파일/블록을 컨텍스트에 추가 가능
+4. 파일 수정 제안은 diff 뷰로 표시되며 **Accept / Reject**로 승인 단위 제어
+
+**주요 사용법**
+```bash
+# VS Code 통합 터미널에서 그대로 CLI 사용도 가능
+claude "이 컴포넌트에 유닛 테스트를 추가해줘"
+
+# 프로젝트 루트에 CLAUDE.md 생성 시 Claude Code가 자동으로 읽어 컨텍스트로 활용
+```
+
+`.vscode/settings.json` 에서 권한/자동승인 범위를 조정할 수 있습니다:
+```json
+{
+  "claudeCode.permissions.allow": ["Bash(git diff:*)", "Bash(npm test:*)"],
+  "claudeCode.autoInstallExtension": true
+}
+```
+
+**대안 — Continue 확장으로 Claude API 직접 연동**
+공식 확장 대신 범용 AI 코딩 확장인 **Continue**로 Claude API를 붙여 쓰고 싶을 때:
 
 ```json
 {
@@ -5855,6 +6635,40 @@ codex --model o4-mini "버그를 찾아서 수정해줘"
 - 프로덕션 DB에 직접 연결하지 말 것
 - `.env` 파일 절대 수정 금지
 ```
+
+#### VS Code 연동 — 공식 Codex 확장
+
+OpenAI가 공식 배포하는 **Codex** VS Code 확장을 사용하면 CLI 없이도 에디터 내에서 동일한 에이전트를 사용할 수 있습니다.
+
+**설치 방법 (택 1)**
+```bash
+# 방법 1 — VS Code Marketplace에서 검색 후 설치
+# 확장 검색창에 "Codex" 입력 → OpenAI 게시 확장(openai.chatgpt) 설치
+
+# 방법 2 — CLI로 확장 ID 직접 설치
+code --install-extension openai.chatgpt
+
+# 방법 3 — codex CLI가 설치돼 있다면 터미널에서 확장 자동 설치 안내를 따라도 됨
+npm install -g @openai/codex
+```
+
+**로그인 및 초기 설정**
+1. VS Code 좌측 활동 표시줄에 추가된 **Codex** 아이콘 클릭
+2. 인증 방식 선택
+   - **Sign in with ChatGPT**(Plus/Pro/Team/Enterprise 구독 — 별도 API 과금 없이 구독 한도 내 사용)
+   - **Use API key**(`sk-...`, 종량제 과금, `OPENAI_API_KEY` 환경변수 또는 확장 설정에 직접 입력)
+3. 우측 패널의 대화창에서 작업 지시 → 파일 변경은 diff로 표시되고 승인 모드(Suggest/Auto-edit/Full-auto)는 CLI와 동일하게 설정에서 조정
+4. 워크스페이스에 `AGENTS.md`가 있으면 확장도 CLI와 동일하게 자동으로 읽어 컨텍스트로 사용
+
+`.vscode/settings.json` 예시:
+```json
+{
+  "openai.chatgpt.approvalMode": "auto-edit",
+  "openai.chatgpt.model": "o4-mini"
+}
+```
+
+> Codex CLI와 VS Code 확장은 동일한 인증 세션(`codex login`으로 로그인한 ChatGPT 계정 또는 API 키)을 공유하므로, 터미널에서 로그인해 두면 확장에서 다시 로그인할 필요가 없는 경우가 많습니다.
 
 ---
 
