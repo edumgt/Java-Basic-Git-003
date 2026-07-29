@@ -1,0 +1,11 @@
+# Optional NVIDIA GPU override for the Ollama service.
+# Use together with docker-compose.yml only after NVIDIA Container Toolkit setup.
+services:
+  ollama:
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]

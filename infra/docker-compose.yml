@@ -37,6 +37,7 @@ volumes:
   # Vector DB
   qdrant_data:
   # AI
+  ollama_data:
   playwright_captures:
   # Graph
   neo4j_data:
@@ -182,19 +183,12 @@ services:
     restart: unless-stopped
     profiles: ["ai"]
     volumes:
-      - /mnt/c/Users/1/.ollama:/root/.ollama
+      - ollama_data:/root/.ollama
     ports:
       - "11435:11434"
     environment:
       OLLAMA_HOST: 0.0.0.0:11434
       OLLAMA_KEEP_ALIVE: 1h
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: all
-              capabilities: [gpu]
     networks:
       - shared-net
 

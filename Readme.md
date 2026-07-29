@@ -9,6 +9,15 @@
 
 > **edumgt** 교육 과정에서 운영되는 전체 프로젝트 목록과 상호 연관도입니다.
 
+## AI 개발 환경 빠른 시작
+
+VS Code에서 **Claude Code와 Codex를 설치·연동**하고 Docker Compose로 Ollama·Qdrant·PostgreSQL(pgvector) 등 AI/RAG 개발 컨테이너를 실행하는 최신 안내는 [AI 개발 환경 가이드](ai-dev-setup/README.md)를 참고하세요.
+
+- Windows + WSL2, macOS, Linux별 Docker 설치·검증
+- VS Code 필수 확장과 Claude Code/Codex 로그인·권한 설정
+- `CLAUDE.md`, `AGENTS.md`를 이용한 프로젝트 규칙 분리
+- Compose 프로필 기반 최소 AI/RAG, Graph RAG, 스트리밍, 모니터링 컨테이너 실행
+
 ---
 
 # 작업물을 항상 git 또는 기타 산출물로 남기는 이유
@@ -8190,5 +8199,4 @@ mvn clean package
 | Logging | Log4j2 |
 | IDE/Editor | VS Code |
 | Version Control | Git + GitHub |
-
 

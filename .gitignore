@@ -2,3 +2,6 @@
 *.json
 .claude/
 **/node_modules/**
+.env
+.env.*
+!.env.example
