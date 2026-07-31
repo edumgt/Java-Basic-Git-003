@@ -3,6 +3,9 @@
 
 ## 전체 인프라
 
+### NCS 등급의 이해 - https://www.ncs.go.kr/th01/TH-102-001-03.scdo
+### 본 과정의 NCS 등급 - 5등급 - https://www.work24.go.kr/hr/a/a/3100/selectTracseDetl.do?tracseId=AIG20250000501686&tracseTme=6&cstmConsTme=&crseTracseSe=C0061&trainstCstmrId=500035988371&tracseReqstsCd=&focusId=
+
 ![](images/infra.png)
 
 # edumgt 프로젝트 허브
