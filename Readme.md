@@ -474,7 +474,7 @@ flowchart TD
     N --> O[git add → git commit → git push]
     O --> P{PR 제출 필요?}
     P -->|예| Q[GitHub Pull Request 생성]
-    P -->|아니오| R((회차 완료)]
+    P -->|아니오| R((회차 완료))
     Q --> R
 ```
 
@@ -8260,4 +8260,3 @@ mvn clean package
 | Logging | Log4j2 |
 | IDE/Editor | VS Code |
 | Version Control | Git + GitHub |
-
