@@ -8,7 +8,7 @@
 # edumgt 프로젝트 허브
 
 > **edumgt** 교육 과정에서 운영되는 전체 프로젝트 목록과 상호 연관도입니다.
-
+ 
 ## AI 개발 환경 빠른 시작
 
 VS Code에서 **Claude Code와 Codex를 설치·연동**하고 Docker Compose로 Ollama·Qdrant·PostgreSQL(pgvector) 등 AI/RAG 개발 컨테이너를 실행하는 최신 안내는 [AI 개발 환경 가이드](ai-dev-setup/README.md)를 참고하세요.
