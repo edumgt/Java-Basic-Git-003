@@ -6,7 +6,7 @@
 ### NCS 등급의 이해 - https://www.ncs.go.kr/th01/TH-102-001-03.scdo
 ### 본 과정의 NCS 등급 - 5등급 - https://www.work24.go.kr/hr/a/a/3100/selectTracseDetl.do?tracseId=AIG20250000501686&tracseTme=6&cstmConsTme=&crseTracseSe=C0061&trainstCstmrId=500035988371&tracseReqstsCd=&focusId=
 
-![](images/infra.png)
+
 
 ---
 
@@ -61,14 +61,14 @@
 
 # 결론. 본 과정은 일반 NCS 2등급의 웹앱 개발자 수준보다 높은 수년차 이상의 경력인 5등급 과정으로
 # 본인이 AI등의 각종 솔루션 도구를 이용하여 원하는 시스템을 빠르게 구현해 볼수 있는 과정 입니다. 
-# 본 과정은 일반 프리젠테이션의 발표 스타일의 강의가 아닌 repo 단위의 실습을 실무에 적용하는 과정으로
-# 철저하게 repo 단위로 실습 합니다. 즉, 인문학 강의 같은 ppt 설명, 실습, 퀴즈 등의 교습 절차 방식이 아닙니다. 
 ![alt text](image-13.png)
 
 
 
 
 # edumgt 프로젝트 허브
+
+![](images/infra.png)
 
 > **edumgt** 교육 과정에서 운영되는 전체 프로젝트 목록과 상호 연관도입니다.
  
@@ -476,7 +476,7 @@ flowchart TD
     N --> O[git add → git commit → git push]
     O --> P{PR 제출 필요?}
     P -->|예| Q[GitHub Pull Request 생성]
-    P -->|아니오| R((회차 완료)]
+    P -->|아니오| R((회차 완료))
     Q --> R
 ```
 
@@ -7205,4 +7205,3 @@ mvn clean package
 | Logging | Log4j2 |
 | IDE/Editor | VS Code |
 | Version Control | Git + GitHub |
-
