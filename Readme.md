@@ -4,6 +4,9 @@
 ## 전체 인프라
 
 ### NCS 등급의 이해 - https://www.ncs.go.kr/th01/TH-102-001-03.scdo
+
+### 예시로 8년차 제빵사가 자신의 레시피, 빵 사진을 AI 에게 학습 시켜 좋은 빵을 만들기 위한 최적의 레시피를 찾아내는 작업으로 IT 무경험자가 AI 의 도움을 받아 해결하는 과정
+
 ### 본 과정의 NCS 등급 - 5등급 - https://www.work24.go.kr/hr/a/a/3100/selectTracseDetl.do?tracseId=AIG20250000501686&tracseTme=6&cstmConsTme=&crseTracseSe=C0061&trainstCstmrId=500035988371&tracseReqstsCd=&focusId=
 
 ## 플랫폼을 사용하는 방법 예시
