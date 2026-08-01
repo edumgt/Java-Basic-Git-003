@@ -1,9 +1,16 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
 
-## 전체 인프라
+# 전체 인프라
 
-### NCS 등급의 이해 - https://www.ncs.go.kr/th01/TH-102-001-03.scdo
+## 2026-08-03 주차 REPO
+
+### https://github.com/edumgt/edumgt-lab-init
+### https://github.com/edumgt/investment-analysis / https://iv.edumgt.co.kr
+### https://github.com/edumgt/stock-coin-trade / https://st.edumgt.co.kr
+### https://github.com/edumgt/docker-class
+
+## NCS 등급의 이해 - https://www.ncs.go.kr/th01/TH-102-001-03.scdo
 
 ### 예시로 8년차 제빵사가 자신의 레시피, 빵 사진을 AI 에게 학습 시켜 좋은 빵을 만들기 위한 최적의 레시피를 찾아내는 작업으로 IT 무경험자가 AI 의 도움을 받아 해결하는 과정
 
@@ -526,10 +533,7 @@ flowchart TD
   curl -fsSL https://ollama.com/install.sh | sh
   ollama pull llama3.2:3b   # 경량 모델 사전 다운로드
   ```
-- [ ] LM Studio 설치 (GUI 방식 로컬 AI, 선택 — CLI 대신 마우스로 모델 관리 가능)
-  - 다운로드: https://lmstudio.ai
-  - 설치 가이드: [lmstudio/README.md](lmstudio/README.md)
-  - 권장 모델: `Qwen2.5 7B Instruct Q4_K_M` 또는 `Llama 3.2 3B Q4_K_M`
+
 
 ---
 
