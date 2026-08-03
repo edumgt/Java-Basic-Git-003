@@ -16,7 +16,7 @@ jobs:
 
     steps:
       - name: 저장소 체크아웃
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Python 3.11 설정
         uses: actions/setup-python@v5
@@ -52,7 +52,7 @@ jobs:
 
     steps:
       - name: 저장소 체크아웃
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Node.js 20 설정
         uses: actions/setup-node@v4
@@ -80,7 +80,7 @@ jobs:
 
     steps:
       - name: 저장소 체크아웃
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Java 17 설정
         uses: actions/setup-java@v4
@@ -104,7 +104,7 @@ jobs:
 
     steps:
       - name: 저장소 체크아웃
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Docker Buildx 설정
         uses: docker/setup-buildx-action@v3
@@ -145,7 +145,7 @@ jobs:
 
     steps:
       - name: 저장소 체크아웃
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Markdown 링크 검사
         uses: gaurav-nelson/github-action-markdown-link-check@v1
