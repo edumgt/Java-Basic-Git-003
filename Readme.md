@@ -1,32 +1,17 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
 
-## 과정개요
+## 전체 인프라
 
-### NCS 등급의 이해 - https://www.ncs.go.kr/th01/TH-102-001-03.scdo
-### 본 과정의 NCS 등급 - 5등급 - https://www.work24.go.kr/hr/a/a/3100/selectTracseDetl.do?tracseId=AIG20250000501686&tracseTme=6&cstmConsTme=&crseTracseSe=C0061&trainstCstmrId=500035988371&tracseReqstsCd=&focusId=
+## 2026-08-03 주차 REPO
 
-
-## 결론. 본 과정은 일반 NCS 2등급의 웹앱 개발자 수준보다 높은 수년차 이상의 경력인 5등급 과정으로
-## 본인이 AI등의 각종 솔루션 도구를 이용하여 원하는 시스템을 구현하려는 과정 입니다. 
-## 본 과정은 일반 프리젠테이션의 발표 스타일의 강의가 아닌 repo 단위의 실습을 실무에 적용하는 과정으로
-## 철저하게 repo 단위로 실 사용 솔루션을 만드는 실습을 합니다. 
-## 즉, 인문학 강의 같은 교안 만들고, ppt 설명, 펑션 실습, 퀴즈 등의 교습 절차 방식이 아닙니다. 
-
-![alt text](images/readme-image-13.png)
-
-
-## 이 과정의 3 분야
-
-### 컴공 전공 또는 관련 분야 종사자 - 주식 투자의 기본 이해 및 개발을 위한 파트
-### 금융 전공 또는 관련 분야 종사자 - Product Owner 로서 프로젝트 리드, IT 개발 기술 연습
-### 기타 본인 지향 하는 바가 ML/DL 연구 분야 라면 - Python 및 ML/DL 등의 적용
+### https://github.com/edumgt/edumgt-lab-init
+### https://github.com/edumgt/investment-analysis / https://iv.edumgt.co.kr
+### https://github.com/edumgt/stock-coin-trade / https://st.edumgt.co.kr
+### https://github.com/edumgt/docker-class
 
 
 ---
----
-
-# AI 에이전트의 도움을 어떻게 받을 것인가
 
 ## 플랫폼을 사용하는 방법 예시
 ## github 를 사용하는 방법을 예시로 설명 합니다. 내부 변수 지정
@@ -75,6 +60,16 @@
 
 ### 웹 콘솔에서 확인
 ![alt text](images/readme-image-12.png)
+
+
+# 결론. 본 과정은 일반 NCS 2등급의 웹앱 개발자 수준보다 높은 수년차 이상의 경력인 5등급 과정으로
+# 본인이 AI등의 각종 솔루션 도구를 이용하여 원하는 시스템을 구현하려는 과정 입니다. 
+# 본 과정은 일반 프리젠테이션의 발표 스타일의 강의가 아닌 repo 단위의 실습을 실무에 적용하는 과정으로
+# 철저하게 repo 단위로 실 사용 솔루션을 만드는 실습을 합니다. 
+# 즉, 인문학 강의 같은 교안 만들고, ppt 설명, 펑션 실습, 퀴즈 등의 교습 절차 방식이 아닙니다. 
+![alt text](images/readme-image-13.png)
+
+
 
 
 # edumgt 프로젝트 허브
@@ -535,10 +530,7 @@ flowchart TD
   curl -fsSL https://ollama.com/install.sh | sh
   ollama pull llama3.2:3b   # 경량 모델 사전 다운로드
   ```
-- [ ] LM Studio 설치 (GUI 방식 로컬 AI, 선택 — CLI 대신 마우스로 모델 관리 가능)
-  - 다운로드: https://lmstudio.ai
-  - 설치 가이드: [lmstudio/README.md](lmstudio/README.md)
-  - 권장 모델: `Qwen2.5 7B Instruct Q4_K_M` 또는 `Llama 3.2 3B Q4_K_M`
+
 
 ---
 
