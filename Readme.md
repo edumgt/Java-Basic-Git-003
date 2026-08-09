@@ -1,8 +1,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
+## 수업 방식
+### 오전 9시 , 오후 2시 , 오후 5시는 IT 기술 관련 SW 설치,설정,가입 진행
+### 수업 50분중 쉬는 시간 포함 30분 이상의 시간은 각자 이어폰, 헤드셋등을 이용해 시청각
 
-## 과정개요
-
+## 국비과정개요
 ### NCS 등급의 이해 - https://www.ncs.go.kr/th01/TH-102-001-03.scdo
 ### 본 과정의 NCS 등급 - 5등급 - https://www.work24.go.kr/hr/a/a/3100/selectTracseDetl.do?tracseId=AIG20250000501686&tracseTme=6&cstmConsTme=&crseTracseSe=C0061&trainstCstmrId=500035988371&tracseReqstsCd=&focusId=
 
